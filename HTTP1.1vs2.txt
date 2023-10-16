@@ -1,0 +1,52 @@
+ a blog on Difference between HTTP1.1 vs HTTP2:
+
+  A Comparison Between HTTP/1.1 and HTTP/2 
+
+The Hypertext Transfer Protocol (HTTP) is the foundation of any data exchange on the Web. As technology has evolved, 
+so too has this essential protocol, with HTTP/2 being the latest version. In this blog, 
+we'll take a closer look at HTTP/1.1 and HTTP/2 and discover how they differ.
+
+The Established Standard
+
+HTTP/1.1 has been the definitive protocol for web interaction since its standardization in 1997. 
+It introduced key features that enabled the modern internet, 
+including persistent connections, chunked transfer coding, and byte serving.
+
+Before HTTP/1.1, every web page element required a separate TCP connection, leading to considerable latency. 
+HTTP/1.1 introduced persistent connections, 
+which allowed multiple requests and responses between the client and server during a single TCP connection. 
+
+HTTP/1.1 introduced the ability to send data in pieces, or 'chunks'. 
+This means a server can start transferring a response before it's fully generated, improving the responsiveness of dynamic pages.
+
+HTTP/1.1 allowed servers to serve a specific range of a document. This made it possible to resume interrupted downloads, or 'stream' content.
+
+However, HTTP/1.1 has its limitations. It struggles with a phenomenon known as 'head-of-line blocking', 
+where the entire connection is blocked because of one slow or lost packet. 
+Additionally, it only allows one outstanding request per TCP connection.
+
+
+HTTP/2: Advancing the Web
+
+HTTP/2 was standardized in 2015 and it brought new features aimed at improving performance. 
+It retained all the methods, status codes, and semantics of HTTP/1.1, 
+but redefined how data is formatted and transported between the client and server. 
+ 
+ HTTP/2 introduced multiplexing, which allows multiple requests and responses to be sent at the same time over a single TCP connection. 
+ This efficiently eliminates the head-of-line blocking issue found in HTTP/1.1.
+
+HTTP/2 added a 'server push' functionality. With this, a server can send resources to the client's cache proactively, 
+reducing the need for a roundtrip.
+
+Unlike HTTP/1.1's textual nature, HTTP/2 is a binary protocol, which makes it more efficient to parse, more compact, and less error-prone.
+
+HTTP/2 introduced HPACK compression, which reduces overhead and allows for more efficient transmission of header fields.
+
+Conclusion: HTTP/1.1 vs HTTP/2
+
+HTTP/2 is a significant upgrade over HTTP/1.1, addressing many of its predecessor's limitations. However, 
+the transition to HTTP/2 has been slow due to the sheer scale of the internet and the need for backwards compatibility. 
+
+As of today, both HTTP/1.1 and HTTP/2 play crucial roles in the functioning of the internet. Understanding the differences
+between them helps to appreciate the evolution of the web and the continuous efforts to make it faster, more reliable, and more efficient.
+
